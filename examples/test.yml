@@ -1,0 +1,35 @@
+author: John Smith
+date: 2019-01-01
+company:
+contact:
+  mail: info@mincedmind.com
+  phone: 123456789
+
+presentation:
+  title: Test Presentation
+  description: This is a test presentation
+  config:
+    show_title: true
+    show_page: true
+    show_page_status: true
+    show_author_meta: true
+    show_author: true
+    asset_viewer: /var/lib/flatpak/app/io.github.zen_browser.zen/current/active/files/zen/zen-bin
+    theme: default
+  tags:
+    - test
+    - example
+    - go
+slides:
+  - title: Slide 1
+    content: This is the content of slide 1
+    assets: ["./examples/example.png"]
+  - title: Slide 2
+    content: |
+      ### This is the content of slide 2
+      * first item
+      * second item
+      * third item
+
+  - title: Slide 3
+    content: This is the content of slide 3
