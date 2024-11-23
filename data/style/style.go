@@ -1,5 +1,10 @@
 package style
 
+import (
+	"regexp"
+	"strings"
+)
+
 type Style struct {
 	Styles       []string
 	DefaultStyle string
@@ -37,4 +42,32 @@ func (s *Style) GetStyle(style string) string {
 	}
 
 	return s.DefaultStyle
+}
+
+func (s *Style) GetProgressColor1(c string) string {
+
+	if isColor(c) {
+		return strings.ToUpper(c)
+	}
+
+	return "#FF7CCB"
+}
+
+func (s *Style) GetProgressColor2(c string) string {
+
+	if isColor(c) {
+		return strings.ToUpper(c)
+	}
+
+	return "#FDFF8C"
+}
+
+func isColor(c string) bool {
+	re := regexp.MustCompile(`^#(?:[0-9a-fA-F]{3}){1,2}$`)
+
+	if re.MatchString(c) {
+		return true
+	}
+
+	return false
 }

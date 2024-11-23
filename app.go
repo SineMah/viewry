@@ -58,7 +58,12 @@ func main() {
 		CurrentAsset:    0,
 		TotalSlides:     float64(len(g.Slides)),
 		Viewport:        viewport.New(50, 10),
-		Progress:        progress.New(progress.WithScaledGradient("#FF7CCB", "#FDFF8C")),
+		Progress: progress.New(
+			progress.WithScaledGradient(
+				s.GetProgressColor1(g.Presentation.Config.ProgressColor1),
+				s.GetProgressColor2(g.Presentation.Config.ProgressColor2),
+			),
+		),
 	}
 
 	p := tea.NewProgram(m, tea.WithAltScreen())

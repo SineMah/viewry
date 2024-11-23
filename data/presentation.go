@@ -9,6 +9,8 @@ type Config struct {
 	Theme          string `yaml:"theme"`
 	ImageViewer    string `yaml:"asset_viewer"`
 	Style          string `yaml:"style"`
+	ProgressColor1 string `yaml:"page_status_color1"`
+	ProgressColor2 string `yaml:"page_status_color2"`
 }
 
 type Presentation struct {

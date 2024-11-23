@@ -17,6 +17,8 @@ presentation:
     asset_viewer: /var/lib/flatpak/app/io.github.zen_browser.zen/current/active/files/zen/zen-bin
     theme: default
     style: dracula
+    page_status_color1: "#FF7CCB"
+    page_status_color2: "#FDFF8C"
   tags:
     - test
     - example
