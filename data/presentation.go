@@ -8,7 +8,7 @@ type Config struct {
 	ShowPageStatus bool   `yaml:"show_page_status"`
 	Theme          string `yaml:"theme"`
 	ImageViewer    string `yaml:"asset_viewer"`
-	Style          string
+	Style          string `yaml:"style"`
 }
 
 type Presentation struct {

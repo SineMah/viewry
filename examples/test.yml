@@ -16,6 +16,7 @@ presentation:
     show_author: true
     asset_viewer: /var/lib/flatpak/app/io.github.zen_browser.zen/current/active/files/zen/zen-bin
     theme: default
+    style: dracula
   tags:
     - test
     - example

@@ -6,6 +6,7 @@ import (
 	"github.com/charmbracelet/bubbles/viewport"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/viewry/data"
+	"github.com/viewry/data/style"
 	"github.com/viewry/display"
 	"gopkg.in/yaml.v3"
 	"log"
@@ -44,7 +45,9 @@ func main() {
 		log.Fatal(fmt.Printf("Could not load file: %s", file))
 	}
 
-	g.Presentation.Config.Style = "dracula"
+	s := style.New()
+
+	g.Presentation.Config.Style = s.GetStyle(g.Presentation.Config.Style)
 
 	m := display.Model{
 		Slides:          g.Slides,
