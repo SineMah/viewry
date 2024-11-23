@@ -1,4 +1,4 @@
-# {{ .Title }}
+# {{ .Title }} {{if .ShowImage}}◢{{end}}
 
 {{ .Content }}
 

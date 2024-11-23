@@ -5,6 +5,7 @@ type Page struct {
 	Content        string
 	ShowPageStatus bool
 	ShowAuthor     bool
+	ShowImage      bool
 	Author         string
 	CurrentPage    int
 	TotalPages     int

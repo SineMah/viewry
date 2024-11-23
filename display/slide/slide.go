@@ -13,6 +13,7 @@ func Render(m data.Meta, p data.Presentation, s data.Slide, currentPage int, tot
 		Content:        s.Content,
 		ShowPageStatus: p.Config.ShowPageStatus,
 		ShowAuthor:     p.Config.ShowAuthor,
+		ShowImage:      len(s.Assets) > 0,
 		Author:         m.Author,
 		CurrentPage:    currentPage,
 		TotalPages:     totalPages,
