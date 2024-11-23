@@ -17,16 +17,6 @@ func main() {
 	var file string
 	debug := false
 
-	// examples/example.png
-	//f, err := os.Open("examples/example.png")
-	//
-	//defer f.Close()
-	//
-	//i, err := img.Decode(f)
-	//t := image.View(30, i)
-	//
-	//log.Fatal(t)
-
 	if os.Getenv("DEBUG_VIEWRY") == "true" {
 		debug = true
 	}
