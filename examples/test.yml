@@ -10,10 +10,8 @@ presentation:
   description: This is a test presentation
   config:
     show_title: true
-    show_page: true
     show_page_status: true
     show_author_meta: true
-    show_author: true
     asset_viewer: /var/lib/flatpak/app/io.github.zen_browser.zen/current/active/files/zen/zen-bin
     theme: default
     style: dracula
@@ -26,7 +24,8 @@ presentation:
 slides:
   - title: Slide 1
     content: This is the content of slide 1
-    assets: ["./examples/example.png"]
+    assets: ["./examples/example.png", "./examples/Screenshot_1.png"]
+
   - title: Slide 2
     content: |
       ### This is the content of slide 2
