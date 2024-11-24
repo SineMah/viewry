@@ -3,11 +3,12 @@ package slide
 import (
 	"bytes"
 	"github.com/viewry/data"
+	"github.com/viewry/data/layout"
 	"os"
 	"text/template"
 )
 
-func Render(m data.Meta, p data.Presentation, s data.Slide, currentPage int, totalPages int) (string, error) {
+func Render(m data.Meta, p data.Presentation, l *layout.Layout, s data.Slide, currentPage int, totalPages int) (string, error) {
 	d := data.Page{
 		Title:          s.Title,
 		Content:        s.Content,
@@ -19,7 +20,7 @@ func Render(m data.Meta, p data.Presentation, s data.Slide, currentPage int, tot
 		TotalPages:     totalPages,
 	}
 
-	tmpl, err := template.New("slide").Parse(loadFile())
+	tmpl, err := template.New("slide").Parse(l.Slide)
 
 	if err != nil {
 		return "", err

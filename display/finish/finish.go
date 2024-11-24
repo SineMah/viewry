@@ -3,11 +3,12 @@ package finish
 import (
 	"bytes"
 	"github.com/viewry/data"
+	"github.com/viewry/data/layout"
 	"os"
 	"text/template"
 )
 
-func Render(c data.Contact, m data.Meta, p data.Presentation) (string, error) {
+func Render(c data.Contact, m data.Meta, p data.Presentation, l *layout.Layout) (string, error) {
 	d := data.Overview{
 		Title:          p.Title,
 		Description:    p.Description,
@@ -17,7 +18,7 @@ func Render(c data.Contact, m data.Meta, p data.Presentation) (string, error) {
 		Tags:           p.Tags,
 	}
 
-	tmpl, err := template.New("overview").Parse(loadFile())
+	tmpl, err := template.New("finish").Parse(l.Finish)
 
 	if err != nil {
 		return "", err

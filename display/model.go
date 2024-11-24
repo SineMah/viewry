@@ -7,6 +7,7 @@ import (
 	"github.com/charmbracelet/glamour"
 	"github.com/charmbracelet/lipgloss"
 	"github.com/viewry/data"
+	"github.com/viewry/data/layout"
 	"github.com/viewry/display/finish"
 	"github.com/viewry/display/overview"
 	"github.com/viewry/display/slide"
@@ -101,16 +102,20 @@ func (m Model) View() string {
 
 func getContent(m Model) string {
 	content := ""
+	l := layout.New()
+
+	l.Load()
 
 	switch m.CurrentPosition {
 	case -1:
-		content, _ = finish.Render(m.Contact, m.Meta, m.Presentation)
+		content, _ = finish.Render(m.Contact, m.Meta, m.Presentation, l)
 	case 0:
-		content, _ = overview.Render(m.Contact, m.Meta, m.Presentation)
+		content, _ = overview.Render(m.Contact, m.Meta, m.Presentation, l)
 	default:
 		content, _ = slide.Render(
 			m.Meta,
 			m.Presentation,
+			l,
 			m.Slides[m.CurrentPosition-1],
 			m.CurrentPosition,
 			len(m.Slides),
