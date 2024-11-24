@@ -12,6 +12,7 @@ func Render(c data.Contact, m data.Meta, p data.Presentation) (string, error) {
 		Title:          p.Title,
 		Description:    p.Description,
 		ShowAuthorMeta: p.Config.ShowAuthorMeta,
+		ShowTitle:      p.Config.ShowTitle,
 		Author:         m.Author,
 		Mail:           c.Mail,
 		Tags:           p.Tags,

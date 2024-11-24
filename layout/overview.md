@@ -1,4 +1,4 @@
-# {{ .Title }}
+{{if .ShowTitle}}# {{ .Title }}{{end}}
 
 ### {{ .Description }}
 
